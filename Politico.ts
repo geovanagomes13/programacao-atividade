@@ -8,6 +8,9 @@ export abstract class Politico {
     private remuneracao: number;
     private projetos: string[];
 
+    // private: impede o acesso direto aos atributos de fora da classe
+
+    // constructor: recebe os valores necessários para criar o objeto.
     constructor(
         nome: string,
         partido: string,
@@ -27,7 +30,9 @@ export abstract class Politico {
         this.remuneracao = remuneracao;
         this.projetos = projetos;
     }
+    // this: representa o objeto atual e armazena os valores nos atributos.
 
+    // public: permite que o método seja chamado de fora da classe.
     public getNome(): string {
         return this.nome;
     }
